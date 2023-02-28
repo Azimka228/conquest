@@ -1,0 +1,91 @@
+.banner {
+  overflow: hidden;
+  min-height: 519px;
+  background: linear-gradient(90deg, #F7F5EF 30%, #FDFDFB 30%);
+  &__slider{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    margin-left: 80px;
+    &_btns{
+      align-self: flex-end;
+      display: flex;
+      margin-top: 22px;
+      margin-right: 80px;
+      & > p{
+        margin: 0 20px 0 20px;
+        font-family: 'Prata',sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(27, 26, 23, 0.82);
+        &:hover{
+          cursor: default;
+        }
+      }
+      & > button{
+        border: 0;
+        background: none;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    box-sizing: border-box;
+    padding: 53px 0 21px 0;
+    position: relative;
+    min-height: 519px;
+    background: linear-gradient(90deg, #F7F5EF 30%, #FDFDFB 30%);
+  }
+  &__information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 120px;
+  }
+  &__title{
+    margin-bottom: 38px;
+  }
+  &__description{
+    & > p{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: #444240;
+    }
+  }
+  &__btn{
+    margin-top: 45px;
+    & > button{
+      padding: 27px 38px 27px 38px;
+      background: #D4B098;
+      border: none;
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      &:hover{
+        cursor: pointer;
+        color: gray;
+      }
+    }
+  }
+  &__circle {
+    left: 90%;
+    position: absolute;
+    & > img:nth-child(1){
+      position: absolute;
+      top: -20%;
+      z-index: 1;
+    }
+  }
+}

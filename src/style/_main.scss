@@ -1,0 +1,140 @@
+main{
+  position: relative;
+  min-height: 768px;
+  background: #FDFDFB;
+}
+
+.main{
+  &__img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    & > img:nth-child(1){
+      position: absolute;
+      z-index:1 ;
+    }
+    & > img:nth-child(2){
+      position: absolute;
+      right:160px;
+      top: -8px;
+      z-index:2 ;
+    }
+  }
+  &__content{
+    box-sizing: border-box;
+    display: flex;
+    min-height: 768px;
+    padding-top: 138px;
+    padding-bottom: 116px;
+  }
+  &__header{
+    position: relative;
+    & > p{
+      font-family: 'Playfair Display',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 60px;
+      color: #1B1A17;
+      &:before{
+        top:35px;
+        left: -65px;
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 0;
+        border: 1px solid #8B8371;
+      }
+    }
+  }
+  &__information{
+    align-self: center;
+    margin-left: 82px;
+    z-index: 10;
+  }
+  &__title{
+    & > p {
+      font-family: 'Playfair Display',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 40px;
+      color: #1B1A17;
+    }
+  }
+  &__description{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(27, 26, 23, 0.82);
+    margin:39px 0 64px 0;
+  }
+  &__btn{
+    &> button{
+      padding: 27px 38px 27px 38px;
+      background: #444240;
+      border: none;
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      &:hover{
+        cursor: pointer;
+        color: gray;
+      }
+    }
+  }
+  &__price{
+    align-self: flex-start;
+    z-index: 10;
+    margin-left: 55px;
+    & > p {
+      font-family: 'Prata',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1B1A17;
+      position: relative;
+      &:after {
+        left: 85px;
+        top: 9px;
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 0;
+        border: 1px solid #8B8371;
+      }
+    }
+  }
+  &__diameter{
+    align-self: flex-end;
+    z-index: 10;
+    margin-left: 40%;
+    & > p {
+      font-family: 'Prata',sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1B1A17;
+      position: relative;
+      &:before {
+        right: 135px;
+        top: 9px;
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 0;
+        border: 1px solid #8B8371;
+      }
+    }
+  }
+
+}
