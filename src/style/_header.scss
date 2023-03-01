@@ -1,3 +1,4 @@
+@import "./_var.scss";
 header {
   min-height: 85px;
   background: #FDFDFB;
@@ -8,12 +9,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     min-height: 85px;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+        flex-direction: column;
+        margin: 20px 0 0 0;
+      }
+    }
   }
 
   &__logo {
     display: flex;
     align-items: center;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+        margin: 20px 0 0 0;
+      }
+    }
     & > p {
       margin-left: 5px;
       font-family: 'Playfair Display', serif;
@@ -27,9 +40,19 @@ header {
   }
 
   &__nav {
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+        margin: 20px 0 20px 0;
+      }
+    }
     & > ul {
       display: flex;
-
+      flex-wrap: wrap;
+      @media only screen and (min-width: 0px) and (max-width: 470px){
+        &{
+          flex-direction: column;
+        }
+      }
       & > li {
         list-style-type: none;
 
@@ -46,6 +69,11 @@ header {
 
       & > li:not(:last-child) {
         margin-right: 65px;
+        @media only screen and (min-width: 0px) and (max-width: 470px){
+          &{
+            margin: 0 0 10px 0;
+          }
+        }
       }
     }
   }

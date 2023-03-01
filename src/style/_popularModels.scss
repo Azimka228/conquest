@@ -1,3 +1,4 @@
+@import "./_var.scss";
 .popularModels {
   padding: 76px 0 86px;
 
@@ -37,6 +38,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 54px;
     grid-row-gap: 1em;
+    @media only screen and (min-width: $smallWidth) and (max-width: $largeWidth){
+      &{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: $smallWidth){
+      &{
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   &__item {
@@ -45,13 +56,21 @@
     max-height: 467px;
     padding: 40px 28px 40px 28px;
     background: #FDFDFB;
-    &__btn{
-      & > button:hover{
+    @media only screen and (min-width: 0px) and (max-width: $smallWidth){
+      &{
+        justify-self: center;
+      }
+    }
+
+    &__btn {
+      & > button:hover {
         cursor: pointer;
       }
     }
+
     &__title {
       margin-bottom: 5px;
+
       & > p {
         font-family: 'Playfair Display', serif;
         font-style: normal;
@@ -65,6 +84,7 @@
 
     &__price {
       margin-bottom: 2px;
+
       & > p {
         font-family: 'Prata', serif;
         font-style: normal;
@@ -76,33 +96,37 @@
     }
 
     &__img {
-     background-image: url("img/popularModels/Ellipse.png");
+      background-image: url("img/popularModels/Ellipse.png");
       background-repeat: no-repeat;
-      &> img{
-        max-height: 313px;
-        max-width: 313px;
+      background-size: cover;
+      & > img {
+        max-height: 100%;
+        max-width: 100%;
       }
     }
-    &__btn{
-      font-family: 'Playfair Display',serif;
+
+    &__btn {
+      font-family: 'Playfair Display', serif;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 21px;
       color: #1B1A17;
       margin-top: 8px;
-     & > button {
-       background: none;
-       border: none;
-       display: flex;
-       align-items: center;
-       &:before{
-         content: '';
-         width: 30px;
-         border: 1px solid #8B8371;
-         margin-right: 18px;
-       }
-     }
+
+      & > button {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          width: 30px;
+          border: 1px solid #8B8371;
+          margin-right: 18px;
+        }
+      }
     }
   }
 }

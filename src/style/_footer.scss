@@ -5,7 +5,26 @@
     min-height: 275px;
     box-sizing: border-box;
     padding-top:79px;
+    @media only screen and (min-width: $smallWidth) and (max-width: $largeWidth){
+      &{
+       justify-content: space-between;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: $smallWidth){
+      &{
+       flex-direction: column;
+        align-items: center;
+      }
+    }
   }
+  &__item {
+    @media only screen and (min-width: 0px) and (max-width: $smallWidth){
+      &{
+        margin-bottom: 40px;
+      }
+    }
+  }
+
   &__title{
     display: flex;
     align-items: flex-end;

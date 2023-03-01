@@ -1,12 +1,24 @@
+@import "./_var.scss";
 .banner {
   overflow: hidden;
   min-height: 519px;
   background: linear-gradient(90deg, #F7F5EF 30%, #FDFDFB 30%);
+  &__img{
+    @media only screen and (min-width: 0px) and (max-width: $smallWidth){
+      &{
+        max-width: 300px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
   &__slider{
     display: flex;
     flex-direction: column;
     margin-right: 70px;
     margin-left: 80px;
+    z-index: 3;
     &_btns{
       align-self: flex-end;
       display: flex;
@@ -40,17 +52,38 @@
     position: relative;
     min-height: 519px;
     background: linear-gradient(90deg, #F7F5EF 30%, #FDFDFB 30%);
+    @media only screen and (min-width: 0px) and (max-width: $largeWidth){
+      &{
+        align-items: center;
+        flex-direction: column;
+      }
+    }
   }
   &__information{
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 120px;
+    @media only screen and (min-width: 0px) and (max-width: $largeWidth){
+      &{
+        margin:0;
+      }
+    }
   }
   &__title{
     margin-bottom: 38px;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+        text-align: center;
+      }
+    }
   }
   &__description{
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+       text-align: center;
+      }
+    }
     & > p{
       font-family: 'Roboto',sans-serif;
       font-style: normal;
@@ -62,6 +95,12 @@
   }
   &__btn{
     margin-top: 45px;
+    @media only screen and (min-width: 0px) and (max-width: $mediumWidth){
+      &{
+       display: flex;
+        justify-content: center;
+      }
+    }
     & > button{
       padding: 27px 38px 27px 38px;
       background: #D4B098;

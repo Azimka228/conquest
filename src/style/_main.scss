@@ -1,7 +1,15 @@
+@import "./_var.scss";
 main{
   position: relative;
   min-height: 768px;
   background: #FDFDFB;
+  @media only screen and (min-width: 0px) and (max-width: 559px){
+    &{
+      display: flex;
+      align-items: center;
+      max-height: max-content;
+    }
+  }
 }
 
 .main{
@@ -12,20 +20,53 @@ main{
     & > img:nth-child(1){
       position: absolute;
       z-index:1 ;
+      @media only screen and (min-width: 0px) and (max-width: 559px){
+        &{
+          right: 0;
+          top: 0;
+          width: 90%;
+        }
+      }
     }
     & > img:nth-child(2){
       position: absolute;
       right:160px;
       top: -8px;
       z-index:2 ;
+      @media only screen and (min-width: 559px) and (max-width: 745px){
+        &{
+          right: 0;
+          top: 0;
+        }
+      }
+      @media only screen and (min-width: 0px) and (max-width: 559px){
+        &{
+          right: 0;
+          top: 0;
+          width: 90%;
+        }
+      }
     }
   }
   &__content{
     box-sizing: border-box;
     display: flex;
     min-height: 768px;
-    padding-top: 138px;
-    padding-bottom: 116px;
+
+    @media only screen and (min-width: 0px) and (max-width: 1170px){
+      &{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: 559px){
+      &{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        min-height: 400px;
+      }
+    }
+
   }
   &__header{
     position: relative;
@@ -94,6 +135,11 @@ main{
     align-self: flex-start;
     z-index: 10;
     margin-left: 55px;
+    @media only screen and (min-width: 0px) and (max-width: $largeWidth){
+      &{
+        margin: 40px 0 0 0;
+      }
+    }
     & > p {
       font-family: 'Prata',sans-serif;
       font-style: normal;
@@ -117,6 +163,11 @@ main{
     align-self: flex-end;
     z-index: 10;
     margin-left: 40%;
+    @media only screen and (min-width: 0px) and (max-width: $largeWidth){
+      &{
+       margin: 40px 0 0 0;
+      }
+    }
     & > p {
       font-family: 'Prata',sans-serif;
       font-style: normal;
