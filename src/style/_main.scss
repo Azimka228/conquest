@@ -3,11 +3,36 @@ main{
   position: relative;
   min-height: 768px;
   background: #FDFDFB;
-  @media only screen and (min-width: 0px) and (max-width: 559px){
+  @media only screen and (min-width: 430px) and (max-width: 559px){
     &{
       display: flex;
       align-items: center;
-      max-height: max-content;
+      min-height: 800px;
+
+    }
+  }
+  @media only screen and (min-width: 370px) and (max-width: 430px){
+    &{
+      display: flex;
+      align-items: center;
+      min-height: 700px;
+
+    }
+  }
+  @media only screen and (min-width: 340px) and (max-width: 370px){
+    &{
+      display: flex;
+      align-items: center;
+      min-height: 600px;
+
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 340px){
+    &{
+      display: flex;
+      align-items: center;
+      min-height: 500px;
+
     }
   }
 }
@@ -52,11 +77,12 @@ main{
     box-sizing: border-box;
     display: flex;
     min-height: 768px;
-
+    padding: 138px 0 116px 0;
     @media only screen and (min-width: 0px) and (max-width: 1170px){
       &{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
       }
     }
     @media only screen and (min-width: 0px) and (max-width: 559px){
@@ -135,9 +161,15 @@ main{
     align-self: flex-start;
     z-index: 10;
     margin-left: 55px;
-    @media only screen and (min-width: 0px) and (max-width: $largeWidth){
+
+    @media only screen and (min-width:559px) and (max-width: $largeWidth){
       &{
         margin: 40px 0 0 0;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: 559px){
+      &{
+        display: none;
       }
     }
     & > p {
@@ -166,6 +198,11 @@ main{
     @media only screen and (min-width: 0px) and (max-width: $largeWidth){
       &{
        margin: 40px 0 0 0;
+      }
+    }
+    @media only screen and (min-width: 0px) and (max-width: 559px){
+      &{
+        display: none;
       }
     }
     & > p {
